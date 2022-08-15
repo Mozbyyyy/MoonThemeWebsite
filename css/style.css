@@ -1,0 +1,95 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    color:white;
+
+}
+:root{
+    --bg:  #000000; 
+    --neon:#2afc00;
+    --headerfontsize: 2em;
+}
+.main{
+  width: 100%;
+  background: linear-gradient(to top, rgb(0,0,0,0.5) 50%, rgb(0,0,0,0.5) 50%), url(../images/1.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 109vh;
+}
+.main-nav{
+  background-color: transparent;
+  width: 100%;
+  padding:15px;
+  text-decoration: none;
+  text-align: center;
+
+
+}
+.main-nav a{
+  text-decoration: none;
+  font-size: 1.5em;
+  letter-spacing: 4px;
+  font-weight: bold;
+  font-family: "Lucida Console", "Courier New", monospace;
+ 
+}
+.main-nav ul{
+  margin-top: 45px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  list-style: none;
+}
+.main-nav a:hover{
+  border-radius: 30px;
+  padding:20px;
+  border: solid white 5px;
+}
+#moon{
+  width:20%;
+  position:relative;
+  top:220px;
+  left:350px;
+  animation-name:movemoon;
+  animation-duration: 8s;
+  animation-timing-function: ease-out;
+}
+
+.side-title h2{
+  text-align: center;
+  width: 500px;
+  position: relative;
+  float: right;
+  right:80px;
+  font-size: 3.3em;
+  letter-spacing: 3px;
+  font-family: 'Brush Script MT', cursive;
+  animation-name: animate-title;
+  animation-duration: 6.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animate-title {
+  from{
+    right:-900px;
+  }
+  to{
+    right:80px;
+  }
+  
+}
+@keyframes movemoon {
+  from{
+    position: relative;
+    top:-350px;
+  }
+  to{
+    position: relative;
+    top:220px;
+    transform:rotate(360deg); 
+  }
+}  
+
